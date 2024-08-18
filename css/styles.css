@@ -1,0 +1,128 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #121212;
+    font-size: 16px;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/watermark.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+a {
+    color: #CA0404;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 300px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #CA0404;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.content .description {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.description p {
+    margin: 20px 0;
+    color: #121212;
+}
+
+.popup {
+    z-index: 100;
+    width: 20em;
+    padding: 0.5em;
+    background-color: #12121212;
+    border: solid 1px #121212;
+    border-radius: 4px;
+    text-align: justify;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.popup .button {
+    display: block;
+    text-align: center;
+    background-color: #CA0404;
+    color: white;
+    margin-top: 0.5em;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #121212;
+    text-align: center;
+    padding: 0;
+}
+
+footer .contact {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: solid 10px #CA0404;
+    background-color: #121212;
+}
+
+footer .contact p {
+    margin: 5px 0;
+}
+
+/* Simple animation */
+header img, header p, .description {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.popup {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+header img.fade-in, .description.fade-in, .popup.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
