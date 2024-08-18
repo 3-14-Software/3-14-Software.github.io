@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>314 Software - Des logiciels à votre mesure</title>
+    <meta name="description" content="3.14 Software est spécialisée dans le développement de logiciels sur mesure, l'intégration de solutions BPM et GED, et le conseil en dématérialisation pour optimiser la transition numérique de votre organisation." />
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        body:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Logo_Round.svg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 300px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #CA0404;
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        .content .description {
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0 auto;
+            max-width: 1024px;
+        }
+
+        .description p {
+            margin: 20px 0;
+            color: #121212;
+        }
+
+        footer {
+            color: #CA0404;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: solid 10px #CA0404;
+            background-color: #121212;
+        }
+
+        footer p {
+            color: #FFFFFF;
+            margin: 5px 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        footer a {
+            color: #CA0404;
+            text-decoration: none;
+        }
+
+        /* Simple animation */
+        header img, header p, .description {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        header img.fade-in, .description.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Logo_Full_Baseline.png" alt="314 Software Logo">
+</header>
+
+<div class="content">
+    <div class="description">
+        <p>Créée en 2024 par un développeur et consultant en informatique de gestion expérimenté, <strong>3<span style="color: #CA0404;">.14</span> So<span style="color: #CA0404;">ft</span>ware</strong> est spécialisée dans le <strong>développement</strong> de logiciels métier sur mesure, conçus pour répondre précisément aux besoins de votre entreprise.</p>
+        <p>Nous vous accompagnons également dans l'intégration de solutions <strong>BPM</strong> (Business Process Management) et <strong>GED</strong> pour optimiser vos processus métier et la gestion de vos documents grâce à notre expertise de <strong>conseil en dématérialisation</strong>, afin de transformer vos pratiques et d'accélérer la <strong>transition numérique</strong> de votre organisation.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Christophe GÉRARDIN</p>
+    <p>06 37 63 12 81</p>
+    <p><a href="mailto:contact@314software.com">contact@314software.com</a></p>
+</footer>
+
+<script>
+    window.onload = function() {
+        document.querySelector('header img').classList.add('fade-in');
+        document.querySelector('.description').classList.add('fade-in');
+    };
+</script>
+
+</body>
+</html>
