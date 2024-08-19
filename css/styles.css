@@ -22,6 +22,12 @@ body:before {
     z-index: -1;
 }
 
+@media (max-width: 768px) {
+    body:before {
+        background-size: 80%;
+    }
+}
+
 a {
     color: #CA0404;
     text-decoration: none;
@@ -67,7 +73,7 @@ header p {
     z-index: 100;
     width: 20em;
     padding: 0.5em;
-    background-color: #12121212;
+    background-color: #ffffff;
     border: solid 1px #121212;
     border-radius: 4px;
     text-align: justify;
@@ -75,6 +81,12 @@ header p {
     top: 1em;
     right: 1em;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 768px) {
+    .popup {
+        display: none;
+    }
 }
 
 .popup .button {
