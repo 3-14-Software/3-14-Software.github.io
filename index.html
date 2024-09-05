@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="popup" class="popup">
+<div id="popup" class="popup" style="display: none;">
     <a href="#" onclick="document.getElementById('popup').style.display='none'; return false;" style="display: block; text-align: right; font-size: 0.8em; font-weight: bold; color: #aaaaaa">X</a>
     <img src="img/nightfinder.png" alt="Logo de NightFinder" width="40" style="float: left; margin-right: 5px;"/>
     Redécouvrez le plaisir de chercher sur internet avec l'aide de <strong>NightFinder</strong>, le moteur de recherche français indépendant boosté à l'intelligence artificielle.
@@ -43,6 +43,7 @@
     window.onload = function() {
         if (window.innerWidth > 768) {
             setTimeout(function() {
+                document.querySelector('.popup').style = "";
                 document.querySelector('.popup').classList.add('fade-in');
             }, 8000);
         }
