@@ -35,16 +35,17 @@ a {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 1em;
+    padding-top: 2em;
 }
 
 header img {
-    max-width: 300px;
+    max-width: 16em;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 1em;
     font-weight: 600;
     color: #CA0404;
 }
@@ -52,8 +53,8 @@ header p {
 .content {
     position: relative;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 1em;
+    margin-bottom: 4em;
 }
 
 .content .description {
@@ -65,7 +66,7 @@ header p {
 }
 
 .description p {
-    margin: 20px 0;
+    margin: 1.5em 0;
     color: #121212;
 }
 
@@ -133,6 +134,10 @@ footer .contact {
 
 footer .contact p {
     margin: 5px 0;
+}
+
+footer .legal {
+    font-style: italic;
 }
 
 /* Simple animation */
