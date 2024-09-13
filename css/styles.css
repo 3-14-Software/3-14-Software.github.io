@@ -56,6 +56,11 @@ header p {
     padding: 1em;
     margin-bottom: 4em;
 }
+@media (max-width: 768px) {
+    .content {
+        margin-bottom: 1em;
+    }
+}
 
 .content .description {
     position: relative;
