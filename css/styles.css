@@ -114,6 +114,12 @@ footer .social {
     margin-top: 1em;
     display: flex; justify-content: center; gap: 8px;
 }
+@media (max-width: 768px) {
+    footer .social {
+        margin-top: 1em;
+        display: flex; justify-content: center; gap: 4px;
+    }
+}
 
 footer .social .icon {
     width: 32px;
@@ -132,8 +138,25 @@ footer .contact {
     background-color: #121212;
 }
 
+footer .contact .author {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+footer .contact .author .right {
+    padding-left: 1em;
+}
+
+@media (max-width: 768px) {
+    footer .contact .author {
+        display: block;
+    }
+}
+
 footer .contact p {
-    margin: 5px 0;
+    margin: 0.5em 0;
+    text-align: left;
 }
 
 footer .legal {
