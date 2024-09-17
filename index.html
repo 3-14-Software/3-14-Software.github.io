@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <script src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -29,10 +30,10 @@
     </div>
 
     <div class="gallery">
-        <a href="img/software1.png" target="_blank"><img src="img/software1.png" width="300" alt="Exemple de logiciel développé par 3.14 Software"/></a>
-        <a href="img/software2.png" target="_blank"><img src="img/software2.png" width="300" alt="Exemple de logiciel développé par 3.14 Software"/></a>
-        <a href="img/software3.png" target="_blank"><img src="img/software3.png" width="300" alt="Portail collaboratif"/></a>
-        <a href="img/software4.png" target="_blank"><img src="img/software4.png" width="300" alt="Exemple de routine de traitement sur mesure développée par 3.14 Software"/></a>
+        <img src="img/software1.png" alt="Exemple de logiciel développé par 3.14 Software" onclick="openLightbox('img/software1.png')">
+        <img src="img/software2.png" alt="Exemple de logiciel développé par 3.14 Software" onclick="openLightbox('img/software2.png')">
+        <img src="img/software3.png" alt="Portail intranet collaboratif" onclick="openLightbox('img/software3.png')">
+        <img src="img/software4.png" alt="Exemple de routine de traitement sur mesure développée par 3.14 Software" onclick="openLightbox('img/software4.png')">
     </div>
 </div>
 
@@ -105,31 +106,12 @@
         Site web hébergé gracieusement par GitHub, 88 Colin P. Kelly Jr Street, San Francisco, CA 94107 United States (+1 877-448-4820)<br>
         Aucun cookie n'est stocké pendant votre navigation, et aucune donnée personnelle n'est collectée.
     </p>
-
 </footer>
 
-
-<script>
-    window.onload = function() {
-        if (window.innerWidth > 768) {
-        /*    setTimeout(function() {
-                document.querySelector('.popup').style = "";
-                document.querySelector('.popup').classList.add('fade-in');
-            }, 8000);
-        */
-            document.querySelector('header img').classList.add('fade-in');
-            setTimeout(function() {
-                document.querySelector('.description').classList.add('fade-in');
-            }, 300);
-            setTimeout(function() {
-                document.querySelector('.gallery').classList.add('fade-in');
-            }, 600);
-            setTimeout(function() {
-                document.querySelector('footer').classList.add('fade-in');
-            }, 900);
-        }
-    };
-</script>
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Lightbox Image">
+    <button class="close-btn" onclick="closeLightbox()">Fermer</button>
+</div>
 
 </body>
 </html>
