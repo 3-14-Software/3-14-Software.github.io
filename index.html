@@ -118,7 +118,12 @@
         }*/
 
         document.querySelector('header img').classList.add('fade-in');
-        document.querySelector('.description').classList.add('fade-in');
+        setTimeout(function() {
+            document.querySelector('.description').classList.add('fade-in');
+        }, 300);
+        setTimeout(function() {
+            document.querySelector('.gallery').classList.add('fade-in');
+        }, 500);
     };
 </script>
 

@@ -205,17 +205,17 @@ footer .legal {
 }
 
 /* Simple animation */
-header img, header p, .description {
+header img, header p, .description, .gallery {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .popup {
-    opacity: 0;
+    opacity: 0;cc
     transition: opacity 2s ease-in-out;
 }
 
-header img.fade-in, .description.fade-in, .popup.fade-in {
+header img.fade-in, .description.fade-in, .gallery.fade-in, .popup.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
