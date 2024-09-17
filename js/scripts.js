@@ -15,13 +15,13 @@ window.onload = function() {
     document.querySelector('header img').classList.add('fade-in');
     setTimeout(function() {
         document.querySelector('.description').classList.add('fade-in');
-    }, 300);
+    }, 200);
     setTimeout(function() {
         document.querySelector('.gallery').classList.add('fade-in');
-    }, 600);
+    }, 400);
     setTimeout(function() {
         document.querySelector('footer').classList.add('fade-in');
-    }, 900);
+    }, 600);
 };
 
 function openLightbox(src) {
