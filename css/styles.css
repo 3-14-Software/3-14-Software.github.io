@@ -43,6 +43,8 @@ header {
     text-align: center;
     padding: 1em;
     padding-top: 2em;
+    background: white;
+    border-bottom: solid 10px #ca0404;
 }
 @media (max-width: 768px) {
     header {
