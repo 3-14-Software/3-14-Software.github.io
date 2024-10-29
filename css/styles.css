@@ -20,6 +20,7 @@ body:before {
     background-position: center;
     opacity: 0.05;
     z-index: -100;
+    position: fixed;
 }
 
 @media (max-width: 768px) {
@@ -60,6 +61,7 @@ header p {
     text-align: center;
     padding: 1em;
     margin-bottom: 4em;
+    text-shadow: 1px 1px 2px #99999999;
 }
 @media (max-width: 768px) {
     .content {
