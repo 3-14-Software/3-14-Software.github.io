@@ -1,10 +1,32 @@
 window.onload = function() {
+
+    // Fade-in
+    const elements = document.querySelectorAll('.fade-out');
+    const animateElement = (element, delay) => {
+        setTimeout(() => {
+            element.classList.add('fade-in');
+        }, delay);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                animateElement(entry.target, 200 * index); // 200 ms
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // 10% of element is visible
+
+    elements.forEach((element) => observer.observe(element));
+
+    // Lightbox
     document.getElementById('lightbox').addEventListener('click', function(e) {
         if (e.target !== document.getElementById('lightbox-img')) {
             closeLightbox();
         }
     });
 
+    // Popup (only on PC)
     if (window.innerWidth > 768) {
     /*    setTimeout(function() {
             document.querySelector('.popup').style = "";
@@ -12,16 +34,7 @@ window.onload = function() {
         }, 8000);
     */
     }
-    document.querySelector('header img').classList.add('fade-in');
-    setTimeout(function() {
-        document.querySelector('.description').classList.add('fade-in');
-    }, 200);
-    setTimeout(function() {
-        document.querySelector('.gallery').classList.add('fade-in');
-    }, 400);
-    setTimeout(function() {
-        document.querySelector('footer').classList.add('fade-in');
-    }, 600);
+
 };
 
 function openLightbox(src) {

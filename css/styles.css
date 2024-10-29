@@ -9,7 +9,7 @@ body {
 
 body:before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -20,7 +20,12 @@ body:before {
     background-position: center;
     opacity: 0.05;
     z-index: -100;
-    position: fixed;
+}
+
+@media (max-width: 768px) {
+    body:before {
+        top: -400px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -84,7 +89,7 @@ header p {
 }
 
 .content .gallery {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .content .gallery img {
@@ -95,7 +100,7 @@ header p {
     width: 300px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .content .gallery img:hover {
@@ -251,9 +256,9 @@ footer .legal {
 }
 
 /* Simple animation */
-header img, header p, .description, .gallery, footer {
+.fade-out {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 .popup {
@@ -261,7 +266,7 @@ header img, header p, .description, .gallery, footer {
     transition: opacity 2s ease-in-out;
 }
 
-header img.fade-in, .description.fade-in, .gallery.fade-in, .popup.fade-in, footer.fade-in {
+.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
