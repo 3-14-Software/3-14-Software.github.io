@@ -24,12 +24,6 @@ body:before {
 
 @media (max-width: 768px) {
     body:before {
-        top: -400px;
-    }
-}
-
-@media (max-width: 768px) {
-    body:before {
         background-size: 80%;
     }
 }
